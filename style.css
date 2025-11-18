@@ -22,7 +22,7 @@
 
 /* Modo Escuro */
 body.tema-escuro {
-    --cor-fundo-principal: #000000;
+    --cor-fundo-principal: #0a0a0a;
     --cor-texto: #ffffff;
     --cor-fundo-cabecalho: #1f1f1f;
     --cor-borda-cabecalho: #333;
@@ -204,7 +204,7 @@ footer {
 .titulo-sip { background-color: #c45911; }
 .titulo-desenv { background-color: #c00000; }
 .titulo-dir, .titulo-recep { background-color: #1f4e79; }
-.titulo-telefones, .titulo-mt { background-color: #3b5b7b; } 
+.titulo-telefones, .titulo-mt , .titulo-com{ background-color: #3b5b7b; } 
 
 /* .bloco-setor tbody tr td:first-child,
 main > div tbody tr td:first-child {    
