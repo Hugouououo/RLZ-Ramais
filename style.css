@@ -1,13 +1,13 @@
 :root {
-    /* Modo Claro (Padrão) */
-    --cor-fundo-principal: #f4f4f4;
+    /* claro (padrao) */
+    --cor-fundo-principal: #dbdbdb;
     --cor-texto: #000;
     --cor-fundo-cabecalho: #ffffff;
     --cor-borda-cabecalho: #e0e0e0;
     --cor-fundo-menu-botao: #e8e8e8;
     --cor-texto-menu-botao: #555;
     --cor-fundo-menu-hover: #e0eeef;
-    --cor-fundo-bloco-setor: #ffffff;
+    --cor-fundo-bloco-setor: #ededed;
     --sombra-bloco-setor: 0 4px 8px rgba(0, 0, 0, 0.1);
     --cor-borda-tabela: #ddd;
     --cor-fundo-rodape: #f0f0f0;
@@ -16,11 +16,11 @@
     --cor-borda-dropdown: #ccc;
     --cor-texto-dropdown-item: #333;
     --cor-fundo-dropdown-item-hover: #f0f0f0;
-    --cor-ramal-destaque: #ffff00;
+    --cor-ramal-destaque: #a5b4bc;
     --cor-texto-ramal-destaque: #333;
 }
 
-/* Modo Escuro */
+/* escuro */
 body.tema-escuro {
     --cor-fundo-principal: #0a0a0a;
     --cor-texto: #ffffff;
@@ -38,11 +38,11 @@ body.tema-escuro {
     --cor-borda-dropdown: #444;
     --cor-texto-dropdown-item: #e0e0e0;
     --cor-fundo-dropdown-item-hover: #444;
-    --cor-ramal-destaque: #707000;
+    --cor-ramal-destaque: #1e314a;
     --cor-texto-ramal-destaque: #f0f0f0;
 }
 
-/* Modo Suporte+ */
+/* suporte+ */
 body.tema-suporte {
     --cor-fundo-principal: #161d31;
     --cor-texto: #ffffff;
@@ -67,6 +67,7 @@ body.tema-suporte {
 
 * {
     box-sizing: border-box;
+    user-select: none;
 }
 
 body {
@@ -92,18 +93,17 @@ main {
 .bloco-setor, main > div:not(.bloco-setor) {
     flex-basis: 300px;
     flex-grow: 1;
-    max-width: 45%; 
+    max-width: 50%; 
     box-shadow: var(--sombra-bloco-setor);
     border-radius: 8px;
     overflow: hidden;
     background-color: var(--cor-fundo-bloco-setor);
     transition: background-color 0.3s, box-shadow 0.3s;
 }
-
 .bloco-setor table, main > div table {
     border-collapse: collapse;
     width: 100%;
-    font-size: 14px;
+    font-size: 15px;
 }
 .bloco-setor th, .bloco-setor td, main > div th, main > div td {
     border: 1px solid var(--cor-borda-tabela);
@@ -113,6 +113,23 @@ main {
 .bloco-setor th, main > div th {
     /* Garante que o cabeçalho de seção (TH) ocupe a largura total */
     padding: 10px 0; 
+}
+
+td.numero{
+    text-align: center;
+}
+
+.numero:hover{
+    background-color: var(--cor-ramal-destaque);
+}
+.numero a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+main a{
+    text-decoration: none;
+    color: var(--cor-texto);
 }
 
 header {
@@ -196,15 +213,16 @@ footer {
     color: white;
     text-align: center;
     font-weight: bold;
-    padding: 10px; /* Garante padding interno nos títulos */
+    padding: 10px; 
 }
 
-.titulo-sat { background-color: #0070c0; }
-.titulo-scpi { background-color: #70ad47; }
-.titulo-sip { background-color: #c45911; }
-.titulo-desenv { background-color: #c00000; }
-.titulo-dir, .titulo-recep { background-color: #1f4e79; }
-.titulo-telefones, .titulo-mt , .titulo-com{ background-color: #3b5b7b; } 
+.titulo-sat { background-color: #0070c0d0; }
+.titulo-scpi { background-color: #70ad47d0; }
+.titulo-sip { background-color: #c45911d0; }
+.titulo-desenv { background-color: #c00000d0; }
+.titulo-dir, .titulo-recep,.titulo-com { background-color: #1f4e79d0; }
+.titulo-telefones { background-color: #3b5b7bd0; }
+.titulo-mt { background-color: #0a7d6cd0;} 
 
 /* .bloco-setor tbody tr td:first-child,
 main > div tbody tr td:first-child {    
@@ -213,6 +231,13 @@ main > div tbody tr td:first-child {
 @media (max-width: 768px) {
     .bloco-setor, main > div {
         max-width: 100%;
-        flex-basis: 100%;
+        flex-basis: 48%;
     }
+}
+
+#wpp{
+    margin: 0% 2% 0% 2%;
+    height: 1em;
+    width: 1em;;
+    vertical-align: middle;
 }
